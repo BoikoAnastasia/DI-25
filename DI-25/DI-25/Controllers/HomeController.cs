@@ -1,14 +1,15 @@
 ﻿using DI_25.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace DI_25.Controllers
+namespace Di_25.Controllers
 {
-    public class HomeController : Controller
+    public class startController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<startController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public startController(ILogger<startController> logger)
         {
             _logger = logger;
         }
@@ -27,6 +28,28 @@ namespace DI_25.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public string hello()
+        {
+            DateTime dateTime = DateTime.Now;
+            int hour = dateTime.Hour;
+
+            if (hour >= 0 && hour <= 5)
+            {
+                return "Доброй ночи";
+            }
+            else if (hour >= 6 && hour <= 11)
+            {
+                return "Доброе утро";
+            }
+            else if (hour >= 12 && hour <= 17)
+            {
+                return "Добрый день";
+            }
+            else
+            {
+                return "Добрый вечер";
+            }
         }
     }
 }
