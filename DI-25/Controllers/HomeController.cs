@@ -29,4 +29,12 @@ namespace Di_25.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
+
+    [Route("calculator")]
+    public class CalculatorController : Controller
+    {
+        [HttpGet("index/{a:int?}/{b:int?}")]
+        public string Get(int a = 0, int b = 0) => $"{a} + {b} = {a+b}";
+        //https://localhost:5001/calculator/index/1/3
+    }
 }
