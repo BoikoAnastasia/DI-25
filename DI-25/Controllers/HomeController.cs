@@ -30,6 +30,8 @@ namespace Di_25.Controllers
             var answer = "";
             for (int i = 0; i < ProductList.products.Count; i++)
             {
+                answer = "";
+                if (ProductList.products[i].Id == a) {
                 answer += ProductList.products[i].Id;
                 answer += "\n";
                 answer += ProductList.products[i].Name;
@@ -37,11 +39,16 @@ namespace Di_25.Controllers
                 answer += ProductList.products[i].Price;
                 answer += "\n";
                 answer += ProductList.products[i].Description;
-                answer += "\n";
-                answer += "\n";
+                return answer;
+                    break;
+                }
+                else
+                {
+                    answer = "Продукта с таким id нет";
+                }
             }
             return answer;
         }
     }
 }
-//https://localhost:7124/Home/Index
+//https://localhost:7124/Home/Index/2
