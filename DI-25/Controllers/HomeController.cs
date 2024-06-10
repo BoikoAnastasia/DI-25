@@ -1,32 +1,31 @@
 ﻿using Di_25.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Di_25.Controllers
+public class Calculator : Controller
 {
-    public class HomeController : Controller
+    public string Index(int a, int b, char operation)
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        string result = " ";
 
-        public IActionResult Index()
+        switch (operation)
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            case '+':
+                return $"{a} + {b} = {a + b}";
+                break;
+            case '-':
+                return $"{a} - {b} = {a - b}";
+                break;
+            case '*':
+                return $"{a} * {b} = {a * b}";
+                break;
+            case '\0':
+                return $"{a} + {b} = {a + b}";
+                break;
+            default:
+                return $"нот воркинг";
         }
     }
 }
