@@ -6,27 +6,38 @@ namespace Di_25.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
-            return View();
+            List<Product> products = ProductRepository.GetAllProducts();
+
+            StringBuilder result = new StringBuilder();
+            foreach (var product in products)
+            {
+                result.AppendLine($"Id: {product.Id}");
+                result.AppendLine($"Name: {product.Name}");
+                result.AppendLine($"Cost: {product.Cost}");
+                result.AppendLine();
+            }
+
+            return Content(result.ToString());
         }
 
-        public IActionResult Privacy()
+        public IActionResult Product(int id)
         {
-            return View();
-        }
+            Product product = ProductRepository.GetAllProducts().FirstOrDefault(p => p.Id == id);
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            StringBuilder result = new StringBuilder();
+            result.AppendLine($"Id: {product.Id}");
+            result.AppendLine($"Name: {product.Name}");
+            result.AppendLine($"Cost: {product.Cost}");
+            result.AppendLine($"Description: {product.Description}");
+
+            return Content(result.ToString());
         }
     }
 }
