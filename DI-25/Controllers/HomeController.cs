@@ -1,4 +1,4 @@
-﻿using Di_25.Models;
+﻿﻿using Di_25.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,10 +13,6 @@ namespace Di_25.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
 
         public IActionResult Privacy()
         {
@@ -28,5 +24,24 @@ namespace Di_25.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public String index(int a)
+        {
+            var answer = "";
+            for (int i = 0; i < Products.kursy.Count; i++)
+            {
+                answer += Products.kursy[i].ID;
+                answer += "\n";
+                answer += Products.kursy[i].Name;
+                answer += "\n";
+                answer += Products.kursy[i].Cost;
+                answer += "\n";
+                answer += Products.kursy[i].Description;
+                answer += "\n";
+                answer += "\n";
+            }
+            return answer;
+        }
     }
 }
+//https://localhost:7124/Home/Index
