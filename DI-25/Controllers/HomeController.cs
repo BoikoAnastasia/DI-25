@@ -28,5 +28,22 @@ namespace Di_25.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public String index(int a)
+        {
+            var answer = "";
+            for (int i = 0; i < ProductList.products.Count; i++)
+            {
+                answer += ProductList.products[i].Id;
+                answer += "\n";
+                answer += ProductList.products[i].Name;
+                answer += "\n";
+                answer += ProductList.products[i].Price;
+                answer += "\n";
+                answer += ProductList.products[i].Description;
+                answer += "\n";
+                answer += "\n";
+            }
+            return answer;
+        }
     }
 }
