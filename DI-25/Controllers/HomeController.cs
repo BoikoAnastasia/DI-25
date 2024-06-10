@@ -28,5 +28,28 @@ namespace Di_25.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public string text()
+        {
+            DateTime dateTime = DateTime.Now;
+            int hour = dateTime.Hour;
+
+            if (hour >= 0 && hour <= 5)
+            {
+                return "Доброй ночи";
+            }
+            else if (hour >= 6 && hour <= 11)
+            {
+                return "Доброго утра";
+            }
+            else if (hour >= 12 && hour <= 17)
+            {
+                return "Добрый день";
+            }
+            else
+            {
+                return "Добрый вечер";
+            }
+        }
     }
 }
+//
