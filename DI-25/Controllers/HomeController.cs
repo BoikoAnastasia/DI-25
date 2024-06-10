@@ -25,7 +25,7 @@ public class Calculator : Controller
                 return $"{a} + {b} = {a + b}";
                 break;
             default:
-                return $"нот воркинг";
+                return $"ура";
         }
     }
 }
