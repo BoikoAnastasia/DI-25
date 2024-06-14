@@ -4,18 +4,23 @@ using System.Diagnostics;
 
 namespace Di_25.Controllers
 {
-    public class HomeController : Controller
+    public class ProductController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<ProductController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public ProductController(ILogger<ProductController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public String index(int id)
         {
-            return View();
+            if (id == 0 || id > ProductList.products.Count)
+            {
+                return "Введите существующий id";
+            }
+
+            return ProductList.products[id - 1].ToString();
         }
 
         public IActionResult Privacy()
