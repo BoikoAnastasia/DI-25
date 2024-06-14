@@ -14,6 +14,10 @@
             Price = price;
             Description = description;
         }
+        public override string ToString()
+        {
+            return Id + "\n" + Name + "\n" + Price + "\n" + Description;
+        }
 
     }
 }
