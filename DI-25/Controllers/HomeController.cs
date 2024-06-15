@@ -6,27 +6,22 @@ namespace Di_25.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public String index(int a)
         {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var answer = "";
+            for (int i = 0; i < FlowerList.products.Count; i++)
+            {
+                answer += FlowerList.products[i].Id;
+                answer += "\n";
+                answer += FlowerList.products[i].Name;
+                answer += "\n";
+                answer += FlowerList.products[i].Price;
+                answer += "\n";
+                answer += FlowerList.products[i].Description;
+                answer += "\n";
+                answer += "\n";
+            }
+            return answer;
         }
     }
 }
