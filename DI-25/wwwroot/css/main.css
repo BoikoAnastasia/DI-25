@@ -141,6 +141,7 @@ main {
     background-color: #2aea14;
     padding: 20px;
     margin-bottom: 60px;
+    padding-bottom: 60px;
 }
 
 .nav {
@@ -190,6 +191,7 @@ aside {
         padding: 20px;
         margin-bottom: 10px;
         display: flex;
+        justify-content: space-between;
     }
 
         .van .item .divimg img {
@@ -200,7 +202,7 @@ aside {
         }
 
         .van .item .text {
-            margin-left: 10px;
+            margin-right: 300px;
         }
 
         .van .item .divimg {
@@ -208,8 +210,8 @@ aside {
         }
 
         .van .item h2 {
-            margin-top: 80px;
-            margin-left: 40px;
+            margin-top: 60px;
+            margin-left: 20px;
         }
 
 .van-footer {
@@ -241,4 +243,8 @@ aside {
     color: black;
     font-size: 22px;
     text-decoration:none;
+}
+.NoProduct{
+    font-size:100px;
+    margin-left:70px
 }
