@@ -1,0 +1,244 @@
+header {
+    background-color: black;
+}
+
+.head {
+    width: 100%;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0px;
+    padding: 0;
+}
+
+.head img {
+    margin-left: 10px;
+}
+
+.head h3 {
+    text-align: center;
+    color: #E5383B;
+    font-size: 32px;
+    margin-left: 190px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .buttons a {
+        text-decoration: none;
+        color: black;
+    }
+
+.head div div {
+    width: 107px;
+    margin-right: 20px;
+    height: 33px;
+    text-align: center;
+    justify-content: center;
+    color: #E5383B;
+    border-radius: 4px;
+    background-color: #E5383B;
+    color: black;
+    font-size: 22px;
+}
+
+.head2 {
+    background-color: #660708;
+    width: 100%;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .head2 div {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+    }
+
+        .head2 div div {
+            width: 115px;
+            height: 35px;
+            background-color: #E5383B;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 22px;
+            font-style: normal;
+            flex-direction: column;
+        }
+
+footer {
+    color: #E5383B;
+    text-align: center;
+    background-color: black;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 40px;
+}
+
+.main-cart {
+    margin-left: 500px;
+    padding: 10px;
+    padding-left: 200px;
+    padding-right: 200px;
+    align-items: center;
+    align-self: center;
+    background-color: #B1A7A6;
+    padding-bottom: 20px;
+    margin-bottom: 70px;
+}
+
+.tovar {
+    background-color: #D9D9D9;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+
+    .tovar img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+.check {
+    background-color: #D9D9D9;
+    width: 1000px;
+    margin-left: 200px;
+    margin-right: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: flex;
+    background-color: #2aea14;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.nav {
+    background-color: #4318b8;
+    width: 60%;
+    margin-left: 20%;
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+    .nav .item {
+        background-color: #D9D9D9;
+        width: 370px;
+        height: 600px;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+        .nav .item img {
+            max-width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+aside {
+    background-color: #c32f21;
+    width: 30%;
+    margin-left: 1%;
+}
+
+.van {
+    background-color: #c32f21;
+    width: 60%;
+    margin-left: 20%;
+    padding: 20px;
+    min-height: 76.35vh;
+    display: table;
+}
+
+    .van .item {
+        background-color: #D9D9D9;
+        height: 200px;
+        padding: 20px;
+        margin-bottom: 10px;
+        display: flex;
+    }
+
+        .van .item .divimg img {
+            max-height: 80%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .van .item .text {
+            margin-left: 10px;
+        }
+
+        .van .item .divimg {
+            height: 200px;
+        }
+
+        .van .item h2 {
+            margin-top: 80px;
+            margin-left: 40px;
+        }
+
+.van-footer {
+    height: 70px;
+    background-color: #D9D9D9;
+    padding: 20px;
+    display: table-row;
+    vertical-align: bottom;
+}
+
+    .van-footer div h2 {
+        margin-right: 30px;
+    }
+
+    .van-footer div {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+.button {
+    width: 108px;
+    margin-right: 20px;
+    height: 33px;
+    text-align: center;
+    color: #E5383B;
+    border-radius: 4px;
+    background-color: #E5383B;
+    color: black;
+    font-size: 22px;
+    text-decoration:none;
+}
