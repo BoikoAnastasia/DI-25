@@ -15,7 +15,12 @@ namespace Di_25.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(ProductList.products);
+        }
+
+        public IActionResult Cart()
+        {
+            return View(ProductList.products);
         }
 
         public IActionResult Privacy()
@@ -27,6 +32,11 @@ namespace Di_25.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Product(int i)
+        {
+            return View(ProductList.products);
         }
     }
 }
