@@ -30,3 +30,26 @@ namespace Di_25.Controllers
         }
     }
 }
+
+public class CalcController : Controller
+{
+    public String Index(double a, double b, char c)
+    {
+        switch (c)
+        {
+            case '+':
+                return $"{a} + {b} = {a + b}";
+                break;
+            case '-':
+                return $"{a} - {b} = {a - b}"; break;
+            case '*':
+                return $"{a} * {b} = {a * b}";
+                break;
+            case '/':
+                return $"{a} / {b} = {a / b}"; break;
+            case '\0':
+                return $"{a} + {b} = {a + b}"; break;
+            default: return $"Вы дурак";
+        }
+    }
+}
