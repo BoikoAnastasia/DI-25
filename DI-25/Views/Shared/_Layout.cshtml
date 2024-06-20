@@ -7,28 +7,25 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Di_25.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Di_25</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <header class="header">
+        <div class="header_content container">
+            <ul>
+                <li class="header_li"><a href="">SEARCH</a></li>
+                <li class="header_li"><a href="account.html">ACCOUNT</a></li>
+                <li class="header_li"><a href="">FAQS</a></li>
+                <li class="header_li"><a href="">ABOUT</a></li>
+                <li class="header_li"><a href="index.html">gilly</a></li>
+                <div><a class="header_li" onclick="location.href='@Url.Action("Index","Home")'">CATALOG</a></div>
+                <li class="header_li"><a href="">SERVICES</a></li>
+                <li class="header_li"><a href="">VISIT</a></li>
+                <div>
+                    <a class="header_li" onclick="location.href='@Url.Action("Cart","Home")'"> MY BASCKET</a>
                 </div>
-            </div>
-        </nav>
+            </ul>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -36,10 +33,32 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Di_25 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer container">
+        <div class="menu-footer">
+            <ul class="list-column-3">
+                <li>SEARCH</li>
+                <li>ACCOUNT</li>
+                <li>FAQS</li>
+                <li>ABOUT</li>
+                <li>SHOP</li>
+                <li>SERVICES</li>
+            </ul>
+            <ul class="list-column-3">
+                <li id="li_text">VISIT</li>
+                <li>3936 Sunset</li>
+                <li>Los Angeles, CA 90029</li>
+                <li>323.953.2910</li>
+                <li id="li2">M-Th: 10AM - 5PM</li>
+                <li>F-Sa: 10AM - 6PM</li>
+                <li>Sun: 10AM - 4PM</li>
+            </ul>
+            <ul class="list-column-4">
+                <li id="li_text">FOLOOW</li>
+                <li>Instagram</li>
+                <li>Facebook</li>
+            </ul>
         </div>
+    </footer>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
