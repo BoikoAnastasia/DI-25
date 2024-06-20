@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Home Page";
+}
+
+@using Di_25.Controllers
+@model List<Product>
+
+<div class="van">
+    @foreach (var product in Model)
+    {
+                <img src="/img/flower.jpg" />
+                <div class="catalog">
+                <h1>@product.Name</h1>
+                <p>@product.Description</p>
+            <h2>@product.Value</h2>
+            <h2>@product.Price</h2>
+            </div>
+    }
+    <div class="van-footer">
+        <div>
+            <h2>К оплате:</h2>
+            <div class="button">Оплатить</div>
+        </div>
+    </div>
+</div>

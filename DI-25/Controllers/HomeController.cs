@@ -4,33 +4,39 @@ using System.Diagnostics;
 
 namespace Di_25.Controllers
 {
-    public class HomeController : Controller
-    {
-        public String index(int a)
-        {
-            var answer = "";
-            for (int i = 0; i < FlowerList.products.Count; i++)
-            {
-                answer = "";
-                if (FlowerList.products[i].Id == a)
-                {
-                    answer += FlowerList.products[i].Id;
-                    answer += "\n";
-                    answer += FlowerList.products[i].Name;
-                    answer += "\n";
-                    answer += FlowerList.products[i].Price;
-                    answer += "\n";
-                    answer += FlowerList.products[i].Description;
-                    return answer;
-                    break;
-                }
-                else
-                {
-                    answer = "Продукта с таким id нет";
-                }
-            }
-            return answer;
-        }
-    }
-}
+	public class HomeController : Controller
+	{
+		private readonly ILogger<HomeController> _logger;
 
+		public HomeController(ILogger<HomeController> logger)
+		{
+			_logger = logger;
+		}
+
+		public IActionResult Index()
+		{
+			return View(ProductList.products);
+		}
+
+		public IActionResult Cart()
+		{
+			return View(ProductList.products);
+		}
+
+		public IActionResult Privacy()
+		{
+			return View();
+		}
+
+		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+		public IActionResult Error()
+		{
+			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+		}
+
+		public IActionResult Product(int i)
+		{
+			return View(ProductList.products);
+		}
+	}
+}
