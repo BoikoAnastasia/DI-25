@@ -5,22 +5,20 @@
 @using Di_25.Controllers
 @model List<Product>
 
-<div class="nav">
+<div class="prosto">
 	@foreach (var product in Model)
 	{
 
-			<ul>
-				<li><img src="/img/flower.jpg" alt=""></li>
-			</ul>
-		<div class="catalog">
+		<section class="item">
+			<div class="section_one_photo">
+				<img src="/img/flower.jpg" alt="Фото товара" width="600" height="400">
+			</div>
+			<div class="section_one_text">
 				<h3>@product.Name</h3>
 				<h5>@product.Price</h5>
 				<p>@product.Description</p>
-				
-				<li>
-					<a class="button" onclick="location.href='@Url.Action("Cart","Home")'">Добавить в корзину</a>
-				</li>
-		</div>
-
+				<a class="button" asp-controller="Home" asp-action="AddToCart" asp-route-productId="@product.Id">Добавить в корзину</a>
+			</div>
+		</section>
 	}
 </div>

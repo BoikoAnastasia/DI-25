@@ -6,20 +6,34 @@
 @using Di_25.Controllers
 @model List<Product>
 
-<div class="van">
+<div class="catalog">
     @foreach (var product in Model)
     {
-                <img src="/img/flower.jpg" />
-                <div class="catalog">
-                <h1>@product.Name</h1>
-                <p>@product.Description</p>
-            <h2>@product.Value</h2>
-            <h2>@product.Price</h2>
+
+        if (product.Value != 0)
+        {
+            <div class="item">
+                <div class="divimg">
+                    <img src="/img/flower.jpg" />
+                </div>
+                <div class="text">
+                    <h1>@product.Name</h1>
+                    <p>@product.Description</p>
+                </div>
+                <h2>@product.Value</h2>
+                <h2>@(product.Value * product.Price);</h2>
             </div>
+        }
     }
-    <div class="van-footer">
+    @if (ViewBag.kol == 0)
+    {
+        <h6 class="NoProduct">Товаров в корзине нет</h6>
+    }
+
+    <div></div>
+    <div class="oplata">
         <div>
-            <h2>К оплате:</h2>
+            <h2>К оплате: @ViewBag.TotalSum</h2>
             <div class="button">Оплатить</div>
         </div>
     </div>
