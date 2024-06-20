@@ -19,6 +19,7 @@
 				<p>@product.Description</p>
 				<li>
 					<a class="button" onclick="location.href='@Url.Action("Cart","Home")'">Добавить в корзину</a>
+					<a onclick="location.href='@Url.Action("ProductDetails","Home", new { id = product.Id })'">Подробнее</a>
 				</li>
 			</div>
 		</section>
