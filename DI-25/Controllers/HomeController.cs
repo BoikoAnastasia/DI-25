@@ -20,7 +20,20 @@ namespace Di_25.Controllers
 
 		public IActionResult Cart()
 		{
+			int kol = ProductList.products.Where(p => p.Value > 0).Sum(p => p.Value);
+			decimal totalSum = ProductList.products.Where(p => p.Value > 0).Sum(p => p.Value * p.Price);
+			ViewBag.kol = kol;
+			ViewBag.TotalSum = totalSum;
 			return View(ProductList.products);
+		}
+
+		public IActionResult AddToCart(int productId)
+		{
+			Product product = ProductList.products.Find(p => p.Id == productId);
+			product.Value++;
+
+			return RedirectToAction("Cart");
+
 		}
 
 		public IActionResult Privacy()
