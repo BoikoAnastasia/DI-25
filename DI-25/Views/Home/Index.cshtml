@@ -15,12 +15,12 @@
 			</div>
 			<div class="section_one_text">
 				<h3>@product.Name</h3>
-				<h5>@product.Price</h5>
+				<h5>@product.Price руб</h5>
 				<p>@product.Description</p>
-				<li>
-					<a class="button" onclick="location.href='@Url.Action("Cart","Home")'">Добавить в корзину</a>
-					<a onclick="location.href='@Url.Action("ProductDetails","Home", new { id = product.Id })'">Подробнее</a>
-				</li>
+				<div class="opis">
+					<a class="button" onclick="location.href='@Url.Action("Cart","Home")'">В корзину</a>
+					<a class="button" onclick="location.href='@Url.Action("ProductDetails","Home", new { id = product.Id })'">Подробнее</a>
+				</div>
 			</div>
 		</section>
 }

@@ -175,7 +175,7 @@ aside {
 }
 
 .van {
-    background-color: #c32f21;
+    background-color: #4318b8;
     width: 60%;
     margin-left: 20%;
     padding: 20px;
@@ -184,7 +184,7 @@ aside {
 }
 
     .van .item {
-        background-color: #D9D9D9;
+        background-color: #4318b8;
         height: 200px;
         padding: 20px;
         margin-bottom: 10px;
@@ -230,7 +230,7 @@ aside {
     }
 
 .button {
-    width: 108px;
+    width: 140px;
     margin-right: 20px;
     height: 33px;
     text-align: center;
@@ -240,4 +240,22 @@ aside {
     color: black;
     font-size: 22px;
     text-decoration:none;
+}
+
+.product-block{
+    display:flex;
+}
+
+.opis{
+    display:flex;
+    justify-content:space-between
+}
+
+.section_one_text{
+    margin-left:20px;
+}
+
+.btns{
+    margin-top:260px;
+    margin-left:360px;
 }
