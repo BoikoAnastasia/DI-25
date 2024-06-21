@@ -1,24 +1,27 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
 @using Di_25.Controllers
 @model List<Product>
 
 <div class="nav">
-@foreach (var product in Model)
-{
-	
-        <section class="item">
+	@foreach (var product in Model)
+	{
+
+		<section class="item">
 			<div class="section_one_photo">
 				<img src="/img/img1.gif" alt="Фото товара" width="600" height="400">
 			</div>
 			<div class="section_one_text">
 				<h3>@product.Name</h3>
-				<h5>@product.Price</h5>
+				<h5>@product.Price руб</h5>
 				<p>@product.Description</p>
-					<a class="button" asp-controller="Home" asp-action="AddToCart" asp-route-productId="@product.Id">Добавить в корзину</a>
+				<div class="opis">
+					<a class="button" onclick="location.href='@Url.Action("Cart","Home")'">В корзину</a>
+					<a class="button" onclick="location.href='@Url.Action("ProductDetails","Home", new { id = product.Id })'">Подробнее</a>
+				</div>
 			</div>
 		</section>
-}
+	}
 </div>
