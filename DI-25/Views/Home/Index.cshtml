@@ -16,7 +16,7 @@
 			<div class="section_one_text">
 				<h3>@product.Name</h3>
 				<h5>@product.Price руб</h5>
-				<p>@product.Description</p>
+				<p>@product.ShortDescription</p>
 				<div class="opis">
 					<a class="button" asp-controller="Home" asp-action="AddToCart" asp-route-productId="@product.Id">В корзину</a>
 					<a class="button" onclick="location.href='@Url.Action("ProductDetails","Home", new { id = product.Id })'">Подробнее</a>
