@@ -16,6 +16,6 @@
     </div>
     <div class="btns">
         <a class="button" onclick="location.href='@Url.Action("Index","Home")'">Продолжить покупки</a>
-        <a href="#" class="button">Добавить в корзину</a>
+        <a class="button" asp-controller="Home" asp-action="AddToCart" asp-route-productId="@Model.Id">В корзину</a>
     </div>
 </div>

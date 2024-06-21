@@ -230,10 +230,8 @@ aside {
         align-items: center;
         justify-content: end;
     }
-
-}
 .NoProduct{
-    font-size:200px;
+    font-size:2rem;
     margin-left:70px
 }
 
