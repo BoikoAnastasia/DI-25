@@ -231,8 +231,14 @@ aside {
         justify-content: end;
     }
 
+}
+.NoProduct{
+    font-size:100px;
+    margin-left:70px
+}
+
 .button {
-    width: 108px;
+    width: 140px;
     margin-right: 20px;
     height: 33px;
     text-align: center;
@@ -241,9 +247,23 @@ aside {
     background-color: #E5383B;
     color: black;
     font-size: 22px;
-    text-decoration:none;
+    text-decoration: none;
 }
-.NoProduct{
-    font-size:100px;
-    margin-left:70px
+
+.product-block {
+    display: flex;
+}
+
+.opis {
+    display: flex;
+    justify-content: space-between
+}
+
+.section_one_text {
+    margin-left: 20px;
+}
+
+.btns {
+    margin-top: 260px;
+    margin-left: 360px;
 }
