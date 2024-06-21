@@ -36,6 +36,15 @@ namespace Di_25.Controllers
 
         }
 
+        public IActionResult ProductDetails(int id)
+        {
+            var product = ProductList.products.FirstOrDefault(p => p.Id == id);
+            if (product == null)
+                return NotFound();
+
+            return View(product);
+        }
+
         public IActionResult Privacy()
         {
             return View();
